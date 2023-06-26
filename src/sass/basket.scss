@@ -1,0 +1,103 @@
+.basket {
+	height: 100vh;
+	width: 40vh;
+	background-color: $green;
+	position: absolute;
+	top: calc(0% - 2.5rem);
+	right: 0;
+	padding: 3rem 2rem;
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+	&-container {
+		margin-top: 3rem;
+		position: relative;
+		height: 80%;
+		// overflow-y: scroll;
+		padding-right: 0.8rem;
+		p.no-items {
+			font-size: 20px;
+			color: $font-secondary;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.total-container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 6rem;
+				h3 {
+					font-size: 24px;
+					color: $font-secondary;
+				}
+				span {
+					font-size: 24px;
+					font-family: "Be Vietnam Pro", sans-serif;
+					font-weight: 700;
+				}
+			}
+			button.continue-btn {
+				width: 100%;
+				cursor: pointer;
+			}
+		}
+		button.continue-btn {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			cursor: pointer;
+			&.null {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+	}
+	.basketItem {
+		display: flex;
+		column-gap: 1rem;
+		padding-block: 2.5rem;
+		width: 100%;
+		align-items: center;
+		&:not(:first-child) {
+			border-top: 1px solid $font-primary;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+		& > img {
+			width: 4rem;
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+		}
+		.price {
+			display: flex;
+			align-items: center;
+			column-gap: 1rem;
+			margin-block: 1rem;
+			img {
+				width: 2rem;
+			}
+			span {
+				font-weight: 700;
+				font-family: "Be Vietnam Pro", sans-serif;
+			}
+		}
+		a {
+			margin-left: auto;
+			img {
+				width: 1.5rem;
+			}
+		}
+	}
+}

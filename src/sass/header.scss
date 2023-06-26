@@ -1,0 +1,21 @@
+header {
+	padding-top: 0.5rem;
+	height: 2rem;
+	background-color: $font-primary;
+	ul,
+	li {
+		list-style: none;
+		display: flex;
+		column-gap: 1rem;
+		align-items: center;
+	}
+	li {
+		img {
+			width: 1rem;
+			height: auto;
+		}
+		p {
+			color: #fff;
+		}
+	}
+}
